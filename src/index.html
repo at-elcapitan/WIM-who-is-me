@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="title" content="WIM? (Who Is Me?)" />
+        <meta name="description" content="Not staw, but page" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://me.atproject.com.ua/" />
+        <meta property="og:title" content="WIM? (Who Is Me?)" />
+        <meta property="og:description" content="Not staw, but page" />
+        <meta property="og:image" content="https://me.atproject.com.ua/static/image-preview.png" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://me.atproject.com.ua/" />
+        <meta property="twitter:title" content="WIM? (Who Is Me?)" />
+        <meta property="twitter:description" content="Not staw, but page" />
+        <meta property="twitter:image" content="https://me.atproject.com.ua/static/image-preview.png" />
+
+        <link rel="stylesheet" href="css/main.css">
+		<link rel="icon" id="favicon">
+
+        <script src="https://unpkg.com/vue/dist/vue.global.prod.js"></script>
+        <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.global.prod.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+        <title>Who Is Me?</title>
+    </head>
+
+    <body>
+        <div id="app" class="app">
+			<div class="wrapper">
+				<div class="side-left">
+					<div class="self std-block">
+						<div class="avatar">
+							<img src="static/avatar.jpg" alt="" class="rounded">
+						</div>
+
+						<div class="text-block">
+							<div class="name">{{ t("left.card.1.name") }}</div>
+							<div class="small-text">{{ t("left.card.1.sub") }}</div>
+						</div>
+					</div>
+
+					<div class="links">
+						<a class="link std-block" href="https://x.com/vladelcapitan" target="_blank">
+							<img src="static/x.png" alt="">
+						</a>
+						<a href="https://github.com/at-elcapitan" class="link std-block" target="_blank">
+							<img src="static/github-logo.png" alt="">
+						</a>
+						<a href="https://gitea.atproject.com.ua/elcapitan" class="link std-block" target="_blank">
+							<img src="static/gitea.png" alt="">
+						</a>
+						<a href="https://elcapitan.atproject.com.ua/" class="link std-block" target="_blank">
+							<img src="static/mountain.png" alt="">
+						</a>
+						<button @click="discordCopy()" class="link std-block" target="_blank" @mouseenter="onHover" @mouseleave="onUnhover">
+							<div class="svg"></div>
+						</button>
+						<div ref="copied" class="easter">
+							<div class="text" ref="copiedText">{{ t("left.card.easter.initial") }}</div>
+						</div>
+					</div>
+				</div>
+				<div class="side-right">
+				</div>
+			</div>
+		</div>
+           
+        <script src="js/app.js"></script>
+        <script>
+			const scroll = new SmoothScroll('a[href*="#"]', {
+                speed: 800,
+                speedAsDuration: true
+            });
+        </script>
+    </body>
+</html>

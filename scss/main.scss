@@ -1,0 +1,214 @@
+@use "./themes.scss" as *;
+@import url('font.css');
+
+:root[data-theme="light"] {
+	@include set-theme(light);
+}
+
+:root[data-theme="dark"] {
+	@include set-theme(dark);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root[data-theme="auto"] {
+		@include set-theme(dark);
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	:root[data-theme="auto"] {
+		@include set-theme(light);
+	}
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+	background-color: var(--body-background);
+	color: var(--text)
+}
+
+#app {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+.wrapper {
+	width: 70%;
+	height: 50%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.std-block {
+	border: 1px solid var(--border-main);
+	border-radius: 15px;
+
+	background-color: var(--card-background);
+	// box-shadow: 0 0 15px var(--card-shadow);
+
+	transition: border-color      200ms, 
+				background-color  200ms,
+				transform         200ms;
+}
+
+.side-left {
+	height: 100%;
+	width: 320px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+
+	.self {
+		width: 100%;
+		padding: 10px;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+
+		.avatar {
+			position: relative;
+			width: 125px;
+			height: 125px;
+
+			border: 1px solid var(--border-img);
+			border-radius: 50%;
+
+			overflow: hidden;
+		}
+
+		.text-block {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			.name {
+				font-size: 24px;
+				font-weight: 500;
+			}
+
+			.small-text {
+				font-size: 14px;
+				font-weight: 100;
+
+				color: var(--small-text);
+			}
+		}
+	}
+
+	.links {
+		width: calc(100% + 25px);
+
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+
+		.link {
+			width: 55px;
+			height: 55px;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			user-select: none;
+			cursor: pointer;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+
+			img {
+				filter: invert(var(--invert));
+				width: 30px;
+				height: 30px;
+			}
+
+			.svg {
+				width: 30px;
+				height: 30px;
+				background-color: var(--svg);
+
+				-webkit-mask: url("../static/discord.svg") no-repeat center;
+				mask: url("../static/discord.svg") no-repeat center;
+
+				-webkit-mask-size: contain;
+				mask-size: contain;
+			}
+
+			&:hover {
+				background-color: var(--card-background-hover);
+				border-color: var(--border-main-hover);
+			}
+
+			&:active {
+				transform: translateY(2px);
+
+				background-color: var(--card-background-active);
+				border-color: var(--border-main-active);
+			}
+		}
+
+		.easter {
+			position: absolute;
+			width: max-content;
+			padding: 5px 8px;
+
+			left: calc(100% - 27.5px);
+  			bottom: calc(100% + 7px);
+			transform: translateX(-50%);
+			font-size: 14px;
+
+			opacity: 0;
+			background-color: var(--card-background);
+
+			border: 1px solid var(--border-main);
+			border-radius: 10px;
+
+			transition: opacity 200ms;
+
+			&.copied {
+				color: rgb(255, 255, 255) !important;
+				background-color: #3d9e60;
+				border: 1px solid #70a48d;
+				border-radius: 10px;
+			}
+
+			&.godlike {
+				color: rgb(255, 255, 255) !important;
+				background-color: rgb(218, 94, 94);
+				border-color: rgb(220, 129, 129);
+			}
+
+			&.godlike .text {
+				animation: shake 0.2s infinite;
+			}
+		}
+	}
+}
+
+@keyframes shake {
+	0%   { transform: translate(0, 0); }
+	25%  { transform: translate(3px, -2px); }
+	50%  { transform: translate(-3px, 2px); }
+	75%  { transform: translate(2px, 3px); }
+	100% { transform: translate(0, 0); }
+}
