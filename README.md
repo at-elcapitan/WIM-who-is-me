@@ -2,6 +2,9 @@
 
 Project created in honor of utaite [yoei.](https://x.com/yoei___)'s song [WIM \(WOE Is Me!\)](https://www.youtube.com/watch?v=Zr2n4nxeUtk)
 
+> [!NOTE]  
+> This project has no official relation to the utaite [yoei.](https://x.com/yoei___) It was created as a tribute and doesn't try to use her name in any inappropriate or misleading way.
+
 Personal single-page portfolio website built with HTML5, SCSS, JS (Vue.js, I18n).
 
 Link: https://me.atproject.com.ua/
