@@ -1,0 +1,40 @@
+# WIM (Who Is Me?)
+
+Project created in honor of utaite [yoei.](https://x.com/yoei___)'s song [WIM (WOE Is Me!)](https://www.youtube.com/watch?v=Zr2n4nxeUtk)
+
+P](https://x.com/yoei___)ersonal single-page portfolio website built with HTML5, SCSS, JS (Vue.js, I18n).
+
+Link: https://me.atproject.com.ua/
+
+## Start local server
+
+### Requirements
+- Node.js
+- npm
+- gulp-cli (optional)
+
+### Install
+
+```bash
+git clone https://github.com/at-elcapitan/portfolio.git
+cd portfolio
+npm install
+```
+
+### Run
+
+#### Via gulp-cli
+
+```bash
+gulp watch
+```
+
+#### Via npm
+
+```bash
+npm run watch
+```
+
+---
+
+###### © Vladislav "ElCapitan" Nazarov, AT PROJECT 2021 — 2026
