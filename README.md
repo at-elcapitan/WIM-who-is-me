@@ -1,6 +1,6 @@
 # WIM (Who Is Me?)
 
-Project created in honor of utaite [yoei.](https://x.com/yoei___)'s song [WIM (WOE Is Me!)](https://www.youtube.com/watch?v=Zr2n4nxeUtk)
+Project created in honor of utaite [yoei.](https://x.com/yoei___)'s song [WIM \(WOE Is Me!\)](https://www.youtube.com/watch?v=Zr2n4nxeUtk)
 
 P](https://x.com/yoei___)ersonal single-page portfolio website built with HTML5, SCSS, JS (Vue.js, I18n).
 
