@@ -16,8 +16,8 @@ Link: https://me.atproject.com.ua/
 ### Install
 
 ```bash
-git clone https://github.com/at-elcapitan/portfolio.git
-cd portfolio
+git clone https://github.com/at-elcapitan/WIM-who-is-me.git
+cd WIM-who-is-me
 npm install
 ```
 
